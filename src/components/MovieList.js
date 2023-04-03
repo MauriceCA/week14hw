@@ -102,16 +102,16 @@ export default function MovieList (){
 ])
   return (
     <article>
-      <Container fluid>
-        <Row>
-          <Col xs>
-          <h1>Top Movies about Serial Killers</h1>
-            <p>According to IMDB</p>
+      <Container>
+        <h1>Top Movies about Serial Killers</h1>
+        <p>According to IMDB</p>
+        <Row >
+          <Col className="d-flex flex-wrap justify-content-center">
             {allMovies.map((movie, index) => (
               <div key={index}>
-              <Movie movieData={movie} /> <br/>
+                <Movie movieData={movie} /> <br />
               </div>
-              ))}
+            ))}
           </Col>
         </Row>
       </Container>

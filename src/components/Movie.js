@@ -1,10 +1,12 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Rating } from "@mui/material";
+import LeaveAReview from "./Review"
+
 
 export default function Movie ({movieData}){
     return(
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} className="m-3">
           <Card.Img variant="top"
             src={movieData.posterImage}
             alt="movie poster" width="250px"
@@ -16,7 +18,8 @@ export default function Movie ({movieData}){
               Director: {movieData.director} <br/>
               {movieData.description} <br/>
             </Card.Text>
-              <Rating />
+              <Rating /> <br/>
+              <LeaveAReview />
             {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
           </Card.Body>
         </Card>
