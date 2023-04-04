@@ -18,7 +18,7 @@ export default function Movie ({movieData}){
               Director: {movieData.director} <br/>
               {movieData.description} <br/>
             </Card.Text>
-              <Rating /> <br/>
+
               <LeaveAReview />
             {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
           </Card.Body>
