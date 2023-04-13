@@ -16,7 +16,7 @@ export default function MovieList (){
         director: 'David Fincher',
         releaseDate: '1995',
         description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',
-        reviews: []
+        reviews: ["great movie!"]
     },
     {
         id: 1,
@@ -25,7 +25,7 @@ export default function MovieList (){
         director: 'Jonathan Demme',
         releaseDate: '1991',
         description: 'A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.',
-        reviews: []
+        reviews: ["CLASSIC"]
     },
     {
         id: 2,

@@ -4,19 +4,15 @@ import { Rating } from "@mui/material";
 import ReviewForm from './ReviewForm';
 
 
-export default function LeaveAReview() {
+export default function LeaveAReview({movieData}) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
 
   return (
     <>
-      
 
-      <ReviewForm />
-      <Button variant="primary" onClick={handleShow}>
-        Leave a review
-      </Button>
+      <ReviewForm movieData={movieData} />
     </>
   );
 }

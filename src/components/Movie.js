@@ -19,8 +19,8 @@ export default function Movie ({movieData}){
               {movieData.description} <br/>
             </Card.Text>
 
-              <LeaveAReview />
-            {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+              <LeaveAReview movieData={movieData}/>
+
           </Card.Body>
         </Card>
     )
