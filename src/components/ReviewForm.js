@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, FormGroup } from 'react-bootstrap';
 import { InputGroup } from 'react-bootstrap';
-import { Rating } from '@mui/material';
+import BasicRating from './Stars';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
@@ -17,7 +17,6 @@ export default function ReviewForm({movieData}) {
   //something to hold all the objects
   //function to handle event change
   const handleChange = (e) => {
-    console.log(e.target.value)
     setReviewInput({
       writtenReview: e.target.value,
       starRating: 5,
@@ -33,6 +32,7 @@ export default function ReviewForm({movieData}) {
       <div>
         <Form>
           <Form.Group className="mb-3" controlId="reviewForm">
+            <BasicRating />
             <Form.Label>Write your review:</Form.Label> <br />
             <Form.Control onChange={handleChange}
               as="textarea" aria-label="With textarea"
@@ -46,7 +46,7 @@ export default function ReviewForm({movieData}) {
         </Button>
         <div>
           {movieData.reviews},
-          {setReviewInput}
+          {setAllReviews}
         </div>
       </div>
     );

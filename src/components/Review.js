@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import { Rating } from "@mui/material";
 import ReviewForm from './ReviewForm';
 
 

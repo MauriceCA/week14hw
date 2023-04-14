@@ -18,9 +18,7 @@ export default function Movie ({movieData}){
               Director: {movieData.director} <br/>
               {movieData.description} <br/>
             </Card.Text>
-
               <LeaveAReview movieData={movieData}/>
-
           </Card.Body>
         </Card>
     )

@@ -1,19 +1,25 @@
-import React from "react";
-import { Rating } from "@mui/material";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
 
-<Rating
-  name="hover-feedback"
-  value={value}
-  precision={0.5}
-  getLabelText={getLabelText}
-  onChange={(event, newValue) => {
-    setValue(newValue);
-  }}
-  onChangeActive={(event, newHover) => {
-    setHover(newHover);
-  }}
-  emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-/>
-{value !== null && (
-  <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-)}
+export default function BasicRating() {
+  const [value, setValue] = React.useState(2);
+
+  return (
+    <Box
+      sx={{
+        '& > legend': { mt: 2 },
+      }}
+    >
+      <Typography component="legend">Rate this movie:</Typography>
+      <Rating
+        name="simple-controlled"
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      />
+</Box>
+  );
+}
