@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import ReviewForm from './ReviewForm';
+import React, { useState } from "react";
+import { Rating } from "@mui/material";
 
-
-export default function LeaveAReview({movieData}) {
-  const [show, setShow] = useState(false);
-
-  const handleShow = () => setShow(true);
-
+export default function Review({ review }) {
   return (
     <>
-
-      <ReviewForm movieData={movieData} />
+      <Rating readOnly value={review.starRating} />
+      <br />
+      {review.writtenReview}
+      <hr />
     </>
   );
 }
