@@ -54,6 +54,7 @@ export default function ReviewForm({ movieData }) {
         </Button>
       </Form>
       <div>
+        <br />
         {allReviews.map((review, index) => (
           <div key={index}>
             <Review review={review} /> <br />
