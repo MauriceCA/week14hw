@@ -50,7 +50,7 @@ export default function ReviewForm({ movieData }) {
           />
         </Form.Group>
         <Button variant="primary" onClick={(e) => handleSubmit(e)}>
-          Leave a review
+          Submit your review
         </Button>
       </Form>
       <div>
